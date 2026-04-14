@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="aBg" x1="0" y1="0" x2="1440" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#071830"/>
+      <stop offset="50%" stop-color="#0e2548"/>
+      <stop offset="100%" stop-color="#041220"/>
+    </linearGradient>
+    <radialGradient id="aGreenGlow" cx="25%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aOrangeGlow" cx="80%" cy="20%" r="45%">
+      <stop offset="0%" stop-color="#FF9800" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FF9800" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aCenterGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1F4788" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#1F4788" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="aBlur25"><feGaussianBlur stdDeviation="25"/></filter>
+    <filter id="aBlur8"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="aBlur3"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="aGlow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ── Background ── -->
+  <rect width="1440" height="600" fill="url(#aBg)"/>
+  <rect width="1440" height="600" fill="url(#aGreenGlow)"/>
+  <rect width="1440" height="600" fill="url(#aOrangeGlow)"/>
+  <ellipse cx="720" cy="320" rx="700" ry="380" fill="url(#aCenterGlow)" filter="url(#aBlur25)"/>
+
+  <!-- ── Horizon warm glow ── -->
+  <ellipse cx="720" cy="600" rx="900" ry="280" fill="#FF9800" opacity="0.08" filter="url(#aBlur25)"/>
+  <ellipse cx="200" cy="580" rx="350" ry="180" fill="#4CAF50" opacity="0.12" filter="url(#aBlur25)"/>
+
+  <!-- ── Sunrise / horizon rays ── -->
+  <g opacity="0.06" transform="translate(720, 600)">
+    <line x1="0" y1="0" x2="-720" y2="-600" stroke="#FF9800" stroke-width="120"/>
+    <line x1="0" y1="0" x2="-360" y2="-600" stroke="#FF9800" stroke-width="80"/>
+    <line x1="0" y1="0" x2="0" y2="-600" stroke="#FF9800" stroke-width="60"/>
+    <line x1="0" y1="0" x2="360" y2="-600" stroke="#FF9800" stroke-width="80"/>
+    <line x1="0" y1="0" x2="720" y2="-600" stroke="#FF9800" stroke-width="120"/>
+  </g>
+
+  <!-- ── Stars ── -->
+  <g fill="white">
+    <circle cx="50" cy="28" r="1.2" opacity="0.8"/>
+    <circle cx="128" cy="14" r="0.9" opacity="0.62"/>
+    <circle cx="208" cy="46" r="1.6" opacity="0.88"/>
+    <circle cx="285" cy="19" r="0.9" opacity="0.68"/>
+    <circle cx="382" cy="34" r="1.4" opacity="0.78"/>
+    <circle cx="462" cy="9" r="0.9" opacity="0.52"/>
+    <circle cx="535" cy="52" r="1.8" opacity="0.88"/>
+    <circle cx="618" cy="24" r="0.9" opacity="0.7"/>
+    <circle cx="695" cy="41" r="1.4" opacity="0.76"/>
+    <circle cx="772" cy="16" r="0.9" opacity="0.6"/>
+    <circle cx="852" cy="46" r="1.8" opacity="0.86"/>
+    <circle cx="918" cy="29" r="0.9" opacity="0.66"/>
+    <circle cx="995" cy="17" r="1.4" opacity="0.8"/>
+    <circle cx="1065" cy="49" r="0.9" opacity="0.56"/>
+    <circle cx="1148" cy="13" r="1.8" opacity="0.9"/>
+    <circle cx="1228" cy="42" r="0.9" opacity="0.66"/>
+    <circle cx="1308" cy="25" r="1.4" opacity="0.76"/>
+    <circle cx="1412" cy="46" r="0.9" opacity="0.56"/>
+    <circle cx="32" cy="92" r="1.4" opacity="0.66"/>
+    <circle cx="98" cy="80" r="0.9" opacity="0.5"/>
+    <circle cx="175" cy="108" r="1.8" opacity="0.8"/>
+    <circle cx="262" cy="74" r="0.9" opacity="0.58"/>
+    <circle cx="355" cy="98" r="1.4" opacity="0.7"/>
+    <circle cx="435" cy="64" r="0.9" opacity="0.48"/>
+    <circle cx="508" cy="116" r="2" opacity="0.85"/>
+    <circle cx="590" cy="88" r="0.9" opacity="0.66"/>
+    <circle cx="668" cy="71" r="1.4" opacity="0.76"/>
+    <circle cx="745" cy="102" r="0.9" opacity="0.56"/>
+    <circle cx="825" cy="80" r="1.8" opacity="0.86"/>
+    <circle cx="892" cy="64" r="0.9" opacity="0.48"/>
+    <circle cx="968" cy="96" r="1.4" opacity="0.66"/>
+    <circle cx="1038" cy="80" r="0.9" opacity="0.6"/>
+    <circle cx="1118" cy="70" r="1.8" opacity="0.8"/>
+    <circle cx="1198" cy="102" r="0.9" opacity="0.66"/>
+    <circle cx="1278" cy="84" r="1.4" opacity="0.76"/>
+    <circle cx="1388" cy="64" r="0.9" opacity="0.48"/>
+    <circle cx="65" cy="158" r="1.4" opacity="0.7"/>
+    <circle cx="145" cy="142" r="0.9" opacity="0.5"/>
+    <circle cx="225" cy="172" r="1.8" opacity="0.86"/>
+    <circle cx="305" cy="138" r="0.9" opacity="0.6"/>
+    <circle cx="402" cy="162" r="1.4" opacity="0.76"/>
+    <circle cx="482" cy="130" r="0.9" opacity="0.48"/>
+    <circle cx="558" cy="178" r="1.8" opacity="0.8"/>
+    <circle cx="638" cy="152" r="0.9" opacity="0.66"/>
+    <circle cx="715" cy="135" r="1.4" opacity="0.7"/>
+    <circle cx="1325" cy="148" r="1.4" opacity="0.76"/>
+    <circle cx="1428" cy="172" r="0.9" opacity="0.56"/>
+  </g>
+
+  <!-- ── Bright accent stars ── -->
+  <g filter="url(#aGlow)" fill="white">
+    <circle cx="185" cy="58" r="2.6" opacity="0.72"/>
+    <circle cx="632" cy="36" r="3" opacity="0.76"/>
+    <circle cx="1095" cy="30" r="2.6" opacity="0.7"/>
+    <circle cx="1365" cy="82" r="2.6" opacity="0.66"/>
+    <circle cx="78" cy="118" r="2.2" opacity="0.66"/>
+    <circle cx="452" cy="72" r="2.2" opacity="0.6"/>
+  </g>
+
+  <!-- ── Community silhouettes (five people, linked) ── -->
+  <g opacity="0.11" fill="white">
+    <!-- Person 1 (leftmost) -->
+    <circle cx="480" cy="478" r="22"/>
+    <path d="M 458 510 Q 460 480 480 476 Q 500 480 502 510 L 508 570 L 452 570 Z"/>
+    <!-- Person 2 -->
+    <circle cx="560" cy="462" r="24"/>
+    <path d="M 536 496 Q 538 464 560 460 Q 582 464 584 496 L 592 570 L 528 570 Z"/>
+    <!-- Person 3 (center, tallest) -->
+    <circle cx="640" cy="448" r="26"/>
+    <path d="M 614 484 Q 616 450 640 446 Q 664 450 666 484 L 676 570 L 604 570 Z"/>
+    <!-- Person 4 -->
+    <circle cx="720" cy="462" r="24"/>
+    <path d="M 696 496 Q 698 464 720 460 Q 742 464 744 496 L 752 570 L 688 570 Z"/>
+    <!-- Person 5 (rightmost) -->
+    <circle cx="800" cy="478" r="22"/>
+    <path d="M 778 510 Q 780 480 800 476 Q 820 480 822 510 L 828 570 L 772 570 Z"/>
+    <!-- Linking arms (abstract horizontal bands) -->
+    <rect x="490" y="518" width="70" height="8" rx="4" opacity="0.6"/>
+    <rect x="570" y="504" width="70" height="8" rx="4" opacity="0.6"/>
+    <rect x="650" y="504" width="70" height="8" rx="4" opacity="0.6"/>
+    <rect x="730" y="518" width="70" height="8" rx="4" opacity="0.6"/>
+  </g>
+
+  <!-- ── Growth tree (abstract, right side) ── -->
+  <g opacity="0.09" stroke="white" stroke-width="1.5" fill="none">
+    <!-- Trunk -->
+    <line x1="1200" y1="580" x2="1200" y2="420"/>
+    <!-- Main branches -->
+    <line x1="1200" y1="440" x2="1145" y2="360"/>
+    <line x1="1200" y1="460" x2="1260" y2="370"/>
+    <line x1="1200" y1="420" x2="1185" y2="340"/>
+    <!-- Sub-branches left -->
+    <line x1="1145" y1="360" x2="1110" y2="300"/>
+    <line x1="1145" y1="360" x2="1148" y2="295"/>
+    <!-- Sub-branches right -->
+    <line x1="1260" y1="370" x2="1298" y2="308"/>
+    <line x1="1260" y1="370" x2="1255" y2="298"/>
+    <!-- Leaves/nodes -->
+    <circle cx="1110" cy="295" r="8"/>
+    <circle cx="1150" cy="288" r="10"/>
+    <circle cx="1180" cy="332" r="7"/>
+    <circle cx="1298" cy="302" r="8"/>
+    <circle cx="1252" cy="290" r="10"/>
+    <circle cx="1228" cy="338" r="7"/>
+    <!-- Root spreading -->
+    <line x1="1200" y1="580" x2="1145" y2="595"/>
+    <line x1="1200" y1="580" x2="1258" y2="595"/>
+    <line x1="1200" y1="580" x2="1180" y2="598"/>
+    <line x1="1200" y1="580" x2="1220" y2="598"/>
+  </g>
+
+  <!-- ── Abstract connecting network (left side) ── -->
+  <g opacity="0.1" stroke="#4CAF50" stroke-width="1" fill="none">
+    <line x1="80" y1="320" x2="180" y2="280"/>
+    <line x1="180" y1="280" x2="240" y2="350"/>
+    <line x1="240" y1="350" x2="160" y2="400"/>
+    <line x1="160" y1="400" x2="80" y2="380"/>
+    <line x1="80" y1="380" x2="80" y2="320"/>
+    <line x1="180" y1="280" x2="160" y2="400"/>
+    <circle cx="80" cy="320" r="5" fill="#4CAF50"/>
+    <circle cx="180" cy="280" r="7" fill="#4CAF50"/>
+    <circle cx="240" cy="350" r="5" fill="#4CAF50"/>
+    <circle cx="160" cy="400" r="6" fill="#4CAF50"/>
+    <circle cx="80" cy="380" r="5" fill="#4CAF50"/>
+  </g>
+
+  <!-- ── Dot texture ── -->
+  <pattern id="aDots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="0.7" fill="white" opacity="0.04"/>
+  </pattern>
+  <rect width="1440" height="600" fill="url(#aDots)"/>
+
+  <!-- ── Bottom fade ── -->
+  <linearGradient id="aFade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="60%" stop-color="#071830" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#071830" stop-opacity="0.75"/>
+  </linearGradient>
+  <rect width="1440" height="600" fill="url(#aFade)"/>
+</svg>

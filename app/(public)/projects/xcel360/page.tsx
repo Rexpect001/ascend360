@@ -86,8 +86,15 @@ export default async function Xcel360Page() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1F4788] py-24 px-4 text-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section
+        className="relative py-24 px-4 text-white overflow-hidden hero-section"
+        style={{ backgroundImage: "url('/images/programs-bg.svg')" }}
+      >
+        <div className="absolute inset-0" style={{ background: "rgba(8,22,55,0.82)" }} />
+        <div className="absolute inset-0 bg-dots-white" />
+        <div className="orb w-80 h-80 bg-[#4CAF50] top-[-60px] right-[-40px] opacity-[0.12] animate-float-a" />
+        <div className="orb w-60 h-60 bg-[#2196F3] bottom-[-30px] left-[-30px] opacity-[0.14] animate-float-b" />
+        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-[#4CAF50] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
