@@ -166,7 +166,7 @@ export default function AdminTeamPage() {
               ))}
             </div>
           ) : (
-            ["TRUSTEE", "STAFF", "MENTOR"].map((role) => {
+            ["TRUSTEE", "STAFF", "MENTOR"].map((role: string) => {
               const group = grouped[role];
               if (!group || group.length === 0) return null;
               return (
@@ -175,7 +175,7 @@ export default function AdminTeamPage() {
                     {roleLabels[role as keyof typeof roleLabels]}s ({group.length})
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {group.map((m) => (
+                    {group.map((m: TeamMember) => (
                       <div
                         key={m.id}
                         className={`bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-5 ${

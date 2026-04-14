@@ -213,7 +213,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {founders.map((founder) => (
+            {founders.map((founder: Founder) => (
               <div
                 key={founder.name}
                 className="bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-8 text-center hover:-translate-y-1 transition-transform duration-200"
@@ -256,7 +256,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {objectives.map((obj) => (
+            {objectives.map((obj: Objective) => (
               <div
                 key={obj.number}
                 className="bg-white/10 backdrop-blur border border-white/20 rounded p-6 hover:bg-white/15 transition-colors"

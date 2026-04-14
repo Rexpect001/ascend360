@@ -80,7 +80,7 @@ export default function AdminSubmissionsPage() {
 
   function exportCSV() {
     const headers = ["Name", "Email", "Type", "Date", "Read", "Message"];
-    const rows = submissions.map((s) => [
+    const rows = submissions.map((s: Submission) => [
       s.name,
       s.email,
       s.inquiryType,
@@ -88,7 +88,7 @@ export default function AdminSubmissionsPage() {
       s.readStatus ? "Yes" : "No",
       `"${s.message.replace(/"/g, '""')}"`,
     ]);
-    const csv = [headers, ...rows].map((r) => r.join(",")).join("\n");
+    const csv = [headers, ...rows].map((r: string[]) => r.join(",")).join("\n");
     const blob = new Blob([csv], { type: "text/csv" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -167,7 +167,7 @@ export default function AdminSubmissionsPage() {
             </div>
           ) : (
             <div className="space-y-3">
-              {submissions.map((sub) => (
+              {submissions.map((sub: Submission) => (
                 <div
                   key={sub.id}
                   className={`bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ${

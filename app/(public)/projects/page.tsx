@@ -100,7 +100,7 @@ export default function ProjectsPage() {
       {/* SDG connection */}
       <section className="bg-[#F5F5F5] py-10 px-4 border-b border-[#e0e0e0]">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 text-sm">
-          {projects.map((p) => (
+          {projects.map((p: Project) => (
             <div key={p.sdg} className="flex items-center gap-2">
               <div
                 className="w-8 h-8 rounded text-white text-xs font-bold flex items-center justify-center flex-shrink-0"
@@ -120,7 +120,7 @@ export default function ProjectsPage() {
       {/* Projects */}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto space-y-16">
-          {projects.map((project, i) => (
+          {projects.map((project: Project, i: number) => (
             <div
               key={project.slug}
               className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ${
@@ -148,7 +148,7 @@ export default function ProjectsPage() {
                 </p>
                 {project.stats.length > 0 && (
                   <div className="flex gap-4 mt-6 flex-wrap justify-center">
-                    {project.stats.map((s) => (
+                    {project.stats.map((s: string) => (
                       <span
                         key={s}
                         className="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full"

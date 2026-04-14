@@ -215,7 +215,7 @@ export default async function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {sdgProjects.map((project) => (
+            {sdgProjects.map((project: SdgProject) => (
               <div
                 key={project.slug}
                 className="bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden group hover:-translate-y-1 transition-transform duration-200"

@@ -89,7 +89,7 @@ export default function AdminUsersClient({ users: initial }: { users: User[] }) 
             </tr>
           </thead>
           <tbody className="divide-y divide-[#f0f0f0]">
-            {users.map((u) => (
+            {users.map((u: User) => (
               <tr key={u.id} className="hover:bg-[#fafafa]">
                 <td className="px-6 py-4">
                   <p className="font-medium text-[#333] text-sm">{u.name}</p>

@@ -60,7 +60,7 @@ export default async function TeamPage() {
       {/* Team sections */}
       <div className="py-20 px-4">
         <div className="max-w-6xl mx-auto space-y-20">
-          {order.map((roleType) => {
+          {order.map((roleType: string) => {
             const group = grouped[roleType];
             if (!group || group.length === 0) return null;
 
@@ -90,7 +90,7 @@ export default async function TeamPage() {
                       : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
                   }`}
                 >
-                  {group.map((member) => (
+                  {group.map((member: typeof members[number]) => (
                     <div
                       key={member.id}
                       className="bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-8 text-center hover:-translate-y-1 transition-transform duration-200"

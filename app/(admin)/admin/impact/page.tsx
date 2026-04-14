@@ -178,7 +178,7 @@ export default function AdminImpactPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#f0f0f0]">
-                  {stories.map((s) => (
+                  {stories.map((s: ImpactStory) => (
                     <tr key={s.id} className="hover:bg-[#fafafa]">
                       <td className="px-6 py-4">
                         <p className="font-medium text-[#333] text-sm">{s.studentName}</p>

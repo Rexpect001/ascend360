@@ -49,7 +49,7 @@ export default function AdminProjectsClient({ projects: initial }: { projects: P
 
   return (
     <div className="space-y-6">
-      {projects.map((p) => (
+      {projects.map((p: Project) => (
         <div key={p.id} className="bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-6">
           <div className="flex items-start justify-between mb-4">
             <div>

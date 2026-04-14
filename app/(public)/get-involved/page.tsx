@@ -151,7 +151,7 @@ export default function GetInvolvedPage() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {pathways.map((p) => (
+            {pathways.map((p: Pathway) => (
               <div
                 key={p.id}
                 id={p.id}
@@ -180,7 +180,7 @@ export default function GetInvolvedPage() {
                   </p>
 
                   <ul className="space-y-2 mb-6">
-                    {p.benefits.map((b) => (
+                    {p.benefits.map((b: string) => (
                       <li key={b} className="flex items-start gap-2 text-sm text-[#555]">
                         <div
                           className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
@@ -229,7 +229,7 @@ export default function GetInvolvedPage() {
             </p>
           </div>
           <div className="space-y-4">
-            {faqs.map((faq, i) => (
+            {faqs.map((faq: { q: string; a: string }, i: number) => (
               <details
                 key={i}
                 className="bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] group"
