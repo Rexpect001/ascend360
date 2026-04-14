@@ -61,8 +61,11 @@ export default async function ImpactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1F4788] py-20 px-4 text-white text-center">
-        <div className="max-w-3xl mx-auto">
+      <section className="relative bg-[#1F4788] py-24 px-4 text-white text-center overflow-hidden">
+        <div className="absolute inset-0 bg-dots-white" />
+        <div className="orb w-72 h-72 bg-[#4CAF50] top-[-60px] right-[-40px] opacity-[0.09] animate-float-a" />
+        <div className="orb w-56 h-56 bg-[#2196F3] bottom-[-30px] left-[-30px] opacity-[0.10] animate-float-b" />
+        <div className="relative z-10 max-w-3xl mx-auto">
           <p className="text-[#4CAF50] font-semibold uppercase tracking-widest text-sm mb-3">
             Our Impact
           </p>
