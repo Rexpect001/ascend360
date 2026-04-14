@@ -10,9 +10,21 @@ import {
   Globe,
   Leaf,
   ChevronRight,
+  type LucideIcon,
 } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { formatDateShort, estimateReadTime } from "@/lib/utils";
+
+type SdgProject = {
+  slug: string;
+  name: string;
+  description: string;
+  sdg: string;
+  sdgLabel: string;
+  status: string;
+  icon: LucideIcon;
+  color: string;
+};
 
 export const dynamic = "force-dynamic";
 
@@ -55,7 +67,7 @@ const stats = [
   { value: "3", label: "SDGs Targeted", icon: Globe },
 ];
 
-const sdgProjects = [
+const sdgProjects: SdgProject[] = [
   {
     slug: "xcel360",
     name: "Xcel360",
@@ -290,7 +302,7 @@ export default async function HomePage() {
                   "Annual Presentation Day showcasing student talent",
                   "1-on-1 mentorship with industry professionals",
                   "Direct scholarship and opportunity referrals",
-                ].map((item) => (
+                ].map((item: string) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-[#4CAF50] flex items-center justify-center flex-shrink-0 mt-0.5">
                       <svg className="w-3 h-3 fill-white" viewBox="0 0 12 12">
@@ -351,7 +363,7 @@ export default async function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {latestPosts.map((post) => (
+              {latestPosts.map((post: typeof latestPosts[number]) => (
                 <article
                   key={post.id}
                   className="bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden hover:-translate-y-1 transition-transform duration-200"

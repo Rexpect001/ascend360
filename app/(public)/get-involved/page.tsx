@@ -100,7 +100,7 @@ const pathways: Pathway[] = [
   },
 ];
 
-const faqs = [
+const faqs: { q: string; a: string }[] = [
   {
     q: "How often do Xcel360 sessions happen?",
     a: "Sessions run every 2–3 months on Twitter/X Spaces. We announce upcoming sessions on our social media and email list. Register to be notified.",

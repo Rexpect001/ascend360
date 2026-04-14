@@ -113,7 +113,7 @@ export default async function ImpactPage() {
 
           {stories.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {stories.map((story) => (
+              {stories.map((story: typeof stories[number]) => (
                 <div
                   key={story.id}
                   className="bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden hover:-translate-y-1 transition-transform duration-200"
@@ -180,7 +180,7 @@ export default async function ImpactPage() {
                   content:
                     "No one in my family had ever studied abroad. I didn't know where to start. Xcel360 gave me the roadmap and the confidence to apply — and I got the Chevening Scholarship.",
                 },
-              ].map((story) => (
+              ].map((story: { name: string; title: string; outcome: string; content: string }) => (
                 <div
                   key={story.name}
                   className="bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden"

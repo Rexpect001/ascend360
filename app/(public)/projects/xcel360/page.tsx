@@ -197,7 +197,7 @@ export default async function Xcel360Page() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {topics.map((topic) => (
+            {topics.map((topic: string) => (
               <div
                 key={topic}
                 className="flex items-start gap-3 bg-white/10 rounded-lg p-4"
@@ -248,7 +248,7 @@ export default async function Xcel360Page() {
               </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {relatedPosts.map((post) => (
+              {relatedPosts.map((post: typeof relatedPosts[number]) => (
                 <article
                   key={post.id}
                   className="bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden hover:-translate-y-1 transition-transform duration-200"

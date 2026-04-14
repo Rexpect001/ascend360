@@ -9,7 +9,12 @@ import {
   Users,
   Globe,
   Lightbulb,
+  type LucideIcon,
 } from "lucide-react";
+
+type MvvItem = { icon: LucideIcon; title: string; content: string };
+type Objective = { number: string; title: string; desc: string };
+type Founder = { name: string; title: string; bio: string; initials: string };
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -17,7 +22,7 @@ export const metadata: Metadata = {
     "Learn about ASCEND360's mission, vision, founding story, and the 9 strategic objectives driving our work across Nigeria.",
 };
 
-const mvv = [
+const mvv: MvvItem[] = [
   {
     icon: Target,
     title: "Mission",
@@ -38,7 +43,7 @@ const mvv = [
   },
 ];
 
-const objectives = [
+const objectives: Objective[] = [
   {
     number: "01",
     title: "Education Access",
@@ -86,7 +91,7 @@ const objectives = [
   },
 ];
 
-const founders = [
+const founders: Founder[] = [
   {
     name: "Johnson Alabi",
     title: "President & Co-Founder",
