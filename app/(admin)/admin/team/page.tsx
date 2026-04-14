@@ -138,7 +138,7 @@ export default function AdminTeamPage() {
     );
   }
 
-  const grouped = members.reduce<Record<string, TeamMember[]>>((acc, m) => {
+  const grouped = members.reduce<Record<string, TeamMember[]>>((acc: Record<string, TeamMember[]>, m) => {
     if (!acc[m.roleType]) acc[m.roleType] = [];
     acc[m.roleType].push(m);
     return acc;
