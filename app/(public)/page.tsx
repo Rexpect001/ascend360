@@ -132,11 +132,11 @@ export default async function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 shimmer ring-glow text-[#4CAF50] text-sm font-semibold px-5 py-2 rounded-full mb-8 border border-[#4CAF50]/30">
+          <div className="inline-flex items-center gap-2 bg-[#4CAF50]/15 border border-[#4CAF50]/35 text-[#4CAF50] text-xs font-bold px-4 py-1.5 rounded-full mb-8 uppercase tracking-widest">
             <span>🇳🇬</span>
-            <span>Registered Nigerian NGO · SDG 4 · SDG 1 · SDG 13</span>
+            <span>Registered Nigerian NGO</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-5 leading-tight tracking-tight">
             Empowering Africa&apos;s{" "}
             <span className="text-[#4CAF50] relative">
               Next Generation
@@ -145,18 +145,18 @@ export default async function HomePage() {
               </svg>
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
             ASCEND360 is a Nigerian NGO committed to education access, poverty
             reduction, and environmental action — turning potential into
             achievement for students across Nigeria.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/projects/xcel360" className="btn-primary text-base shadow-lg shadow-green-900/30">
-              Explore Xcel360
+            <Link href="/get-involved" className="btn-primary text-base shadow-lg shadow-green-900/30">
+              Get Involved
               <ArrowRight size={18} />
             </Link>
             <Link href="/about" className="btn-secondary text-base">
-              Our Mission
+              Our Story
             </Link>
           </div>
 
@@ -308,78 +308,20 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── XCEL360 FEATURE SPOTLIGHT ── */}
-      <section className="relative py-20 px-4 overflow-hidden" style={{ backgroundColor: "#F0F4FF" }}>
-        {/* Subtle background patterns */}
-        <div className="absolute inset-0 bg-crosshatch" />
-        <div className="orb w-96 h-96 bg-[#4CAF50] top-[-80px] right-[-60px] opacity-[0.07] animate-float-a" />
-        <div className="orb w-72 h-72 bg-[#1F4788] bottom-[-40px] left-[-40px] opacity-[0.05] animate-float-b" />
-
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-[#4CAF50] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wider shadow-md shadow-green-200">
-                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse-glow" />
-                Flagship Program
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1F4788] mb-5 leading-tight">
-                Xcel360: Opening Doors to<br className="hidden md:block" /> Global Opportunities
-              </h2>
-              <p className="text-[#555] leading-relaxed mb-6 text-base">
-                Through virtual sessions on Twitter/X Spaces, Xcel360 has
-                reached over 500 students across Nigeria with life-changing
-                information about scholarships, AI skills, and career
-                development.
-              </p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Virtual learning sessions every 2–3 months",
-                  "Annual Presentation Day showcasing student talent",
-                  "1-on-1 mentorship with industry professionals",
-                  "Direct scholarship and opportunity referrals",
-                ].map((item: string) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#4CAF50] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm shadow-green-200">
-                      <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none">
-                        <path d="M10 3L5 8.5 2 5.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
-                    <span className="text-[#444] text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link href="/projects/xcel360" className="btn-primary">
-                Join Xcel360 <ArrowRight size={18} />
-              </Link>
-            </div>
-
-            {/* Stats — 2×2 grid, no glass boxes, clean numbers */}
-            <div className="grid grid-cols-2 gap-6">
-              {[
-                { end: 500, suffix: "+", label: "Students Reached", color: "#4CAF50" },
-                { end: 25, suffix: "hrs", label: "Content Delivered", color: "#1F4788" },
-                { end: 10, suffix: "+", label: "Scholarships Won", color: "#FF9800" },
-                { end: 1, suffix: "", label: "Annual Presentation Day", color: "#9C27B0" },
-              ].map(({ end, suffix, label, color }) => (
-                <div
-                  key={label}
-                  className="bg-white rounded-2xl p-6 text-center shadow-[0_2px_12px_rgba(31,71,136,0.08)] hover:shadow-[0_4px_20px_rgba(31,71,136,0.14)] transition-shadow"
-                >
-                  <p className="text-4xl font-extrabold mb-1 font-display leading-none" style={{ color }}>
-                    <CountUpStat end={end} suffix={suffix} duration={1800} />
-                  </p>
-                  <p className="text-[#555] text-sm font-medium mt-1">{label}</p>
-                </div>
-              ))}
-            </div>
+      {/* ── TESTIMONIAL / QUOTE ── */}
+      <section className="relative py-16 px-4 overflow-hidden" style={{ background: "linear-gradient(135deg, #0d2d5e 0%, #1F4788 100%)" }}>
+        <div className="absolute inset-0 bg-dots-white" />
+        <div className="orb w-80 h-80 bg-[#4CAF50] top-[-60px] right-[-40px] opacity-[0.08] animate-float-a" />
+        <div className="relative z-10 max-w-3xl mx-auto text-center text-white">
+          <div className="w-10 h-10 bg-[#4CAF50]/30 rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-[#4CAF50]">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
           </div>
-        </div>
-
-        {/* Wave bottom */}
-        <div className="wave-bottom">
-          <svg viewBox="0 0 1440 70" className="w-full" preserveAspectRatio="none" style={{ display: "block" }}>
-            <path d="M0,70 L0,35 Q360,0 720,40 Q1080,70 1440,20 L1440,70 Z" fill="#F5F5F5" />
-          </svg>
+          <p className="text-lg md:text-xl text-blue-100 italic leading-relaxed mb-5">
+            &ldquo;Before Xcel360, I didn&apos;t know scholarships like the Mastercard Foundation existed. After one session, everything changed. Today I&apos;m studying Computer Science at ALU — fully funded.&rdquo;
+          </p>
+          <p className="text-[#4CAF50] font-bold">Fatima A. &mdash; Mastercard Foundation Scholar</p>
         </div>
       </section>
 

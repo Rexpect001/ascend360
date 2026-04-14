@@ -17,11 +17,11 @@
   --font-display: var(--font-heading, "Plus Jakarta Sans"), ui-sans-serif, system-ui, sans-serif;
 
   /* Font sizes */
-  --text-h1: 3.5rem;
-  --text-h2: 2.625rem;
-  --text-h3: 2rem;
-  --text-body: 1.0625rem;
-  --text-sm: 0.9375rem;
+  --text-h1: 2.75rem;
+  --text-h2: 2.125rem;
+  --text-h3: 1.625rem;
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
 
   /* Shadows */
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
