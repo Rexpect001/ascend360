@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { contactSchema } from "@/lib/validations";
+import { sendContactNotification, sendContactAutoReply } from "@/lib/email";
 
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 
@@ -52,6 +53,22 @@ export async function POST(request: NextRequest) {
         inquiryType: parsed.data.inquiryType,
       },
     });
+
+    // Fire emails in background — don't block the response
+    Promise.all([
+      sendContactNotification({
+        name: parsed.data.name,
+        email: parsed.data.email,
+        inquiryType: parsed.data.inquiryType,
+        message: parsed.data.message,
+        submissionId: submission.id,
+      }),
+      sendContactAutoReply({
+        name: parsed.data.name,
+        email: parsed.data.email,
+        inquiryType: parsed.data.inquiryType,
+      }),
+    ]).catch((err) => console.error("[email] Failed to send contact emails:", err));
 
     return NextResponse.json({
       success: true,

@@ -1,10 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { createRateLimiter, getIp } from "@/lib/rateLimit";
+
+const limiter = createRateLimiter("posts", { windowMs: 60_000, max: 60 });
 
 export async function GET(request: NextRequest) {
+  if (!limiter.check(getIp(request))) {
+    return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+  }
+
   const { searchParams } = new URL(request.url);
   const page = parseInt(searchParams.get("page") || "1");
-  const pageSize = parseInt(searchParams.get("pageSize") || "10");
+  const pageSize = Math.min(parseInt(searchParams.get("pageSize") || "10"), 50);
   const category = searchParams.get("category");
   const search = searchParams.get("search");
 

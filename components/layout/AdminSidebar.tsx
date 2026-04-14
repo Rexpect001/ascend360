@@ -12,6 +12,7 @@ import {
   MessageSquare,
   UserCog,
   Settings,
+  BarChart2,
   ChevronLeft,
   ChevronRight,
   LogOut,
@@ -26,6 +27,7 @@ const navItems = [
   { icon: Users, label: "Team", href: "/admin/team" },
   { icon: Heart, label: "Impact Stories", href: "/admin/impact" },
   { icon: MessageSquare, label: "Submissions", href: "/admin/submissions" },
+  { icon: BarChart2, label: "Analytics", href: "/admin/analytics" },
   { icon: UserCog, label: "Users", href: "/admin/users", adminOnly: true },
   { icon: Settings, label: "Settings", href: "/admin/settings" },
 ];

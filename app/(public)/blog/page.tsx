@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Insights, student stories, scholarship opportunities, and news from ASCEND360 — Nigeria's education access NGO.",
+  keywords: ["scholarship blog", "Nigerian students", "education news Nigeria", "Xcel360 blog"],
+  openGraph: {
+    title: "Blog | ASCEND360",
+    description: "Insights, student stories, and scholarship opportunities from ASCEND360.",
+    url: "/blog",
+    images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 async function getInitialData() {

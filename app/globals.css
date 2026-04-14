@@ -364,3 +364,26 @@ h3 {
   right: 0;
   line-height: 0;
 }
+
+/* ── Accessibility: focus-visible outlines ───────────────────────────────── */
+/* Only show focus ring for keyboard users, not mouse clicks */
+:focus-visible {
+  outline: 2px solid #4CAF50;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Remove default outline when focus-visible is supported */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Ensure interactive elements are reachable by keyboard */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #4CAF50;
+  outline-offset: 3px;
+}

@@ -152,3 +152,15 @@ model SiteConfig {
 
   @@map("site_config")
 }
+
+model PageView {
+  id        String   @id @default(uuid())
+  path      String
+  referrer  String?
+  device    String?  // "mobile" | "tablet" | "desktop"
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([path])
+  @@index([createdAt])
+  @@map("page_views")
+}
