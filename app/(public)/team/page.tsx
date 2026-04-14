@@ -29,7 +29,7 @@ export default async function TeamPage() {
   const members = await getTeam();
 
   const grouped = members.reduce<Record<string, typeof members>>(
-    (acc: Record<string, typeof members>, m) => {
+    (acc: Record<string, typeof members>, m: typeof members[number]) => {
       if (!acc[m.roleType]) acc[m.roleType] = [];
       acc[m.roleType].push(m);
       return acc;
