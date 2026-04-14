@@ -1,6 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpen, TrendingUp, Leaf, Clock } from "lucide-react";
+import { ArrowRight, BookOpen, TrendingUp, Leaf, Clock, type LucideIcon } from "lucide-react";
+
+type Project = {
+  slug: string;
+  name: string;
+  tagline: string;
+  description: string;
+  longDesc: string;
+  sdg: string;
+  sdgFull: string;
+  sdgColor: string;
+  status: string;
+  stats: string[];
+  icon: LucideIcon;
+  accent: string;
+  cta: string;
+};
 
 export const metadata: Metadata = {
   title: "Our Projects",
@@ -8,7 +24,7 @@ export const metadata: Metadata = {
     "ASCEND360's three initiatives: Xcel360 (education), Poverty Reduction, and Climate Action — each aligned to a UN Sustainable Development Goal.",
 };
 
-const projects = [
+const projects: Project[] = [
   {
     slug: "xcel360",
     name: "Xcel360",

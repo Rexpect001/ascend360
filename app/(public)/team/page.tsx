@@ -162,7 +162,7 @@ export default async function TeamPage() {
                 { name: "Johnson Alabi", title: "President & Co-Founder", initials: "JA" },
                 { name: "Seun", title: "Co-Founder & Director of Programs", initials: "S" },
                 { name: "Akindoyin", title: "Co-Founder & Director of Partnerships", initials: "A" },
-              ].map((f) => (
+              ].map((f: { name: string; title: string; initials: string }) => (
                 <div
                   key={f.name}
                   className="bg-white rounded shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-8 text-center"

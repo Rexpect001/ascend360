@@ -114,7 +114,7 @@ export default function ContactPage() {
                   { label: "Twitter/X", href: "#" },
                   { label: "LinkedIn", href: "#" },
                   { label: "Instagram", href: "#" },
-                ].map((s) => (
+                ].map((s: { label: string; href: string }) => (
                   <a
                     key={s.label}
                     href={s.href}

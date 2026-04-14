@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, GraduationCap, Heart, Building2, ChevronDown } from "lucide-react";
+import { ArrowRight, GraduationCap, Heart, Building2, ChevronDown, type LucideIcon } from "lucide-react";
+
+type Pathway = {
+  id: string;
+  icon: LucideIcon;
+  title: string;
+  subtitle: string;
+  color: string;
+  description: string;
+  benefits: string[];
+  cta: string;
+  ctaHref: string;
+  external: boolean;
+};
 
 export const metadata: Metadata = {
   title: "Get Involved",
@@ -8,7 +21,7 @@ export const metadata: Metadata = {
     "Join ASCEND360 as a student, volunteer, mentor, or partner — and help expand education access across Nigeria.",
 };
 
-const pathways = [
+const pathways: Pathway[] = [
   {
     id: "students",
     icon: GraduationCap,

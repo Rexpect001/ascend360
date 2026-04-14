@@ -45,12 +45,12 @@ export default async function BlogPage() {
   const { postsData, categories, total } = await getInitialData();
 
   // Serialize dates for client component
-  const posts = postsData.map((p) => ({
+  const posts = postsData.map((p: typeof postsData[number]) => ({
     ...p,
     publishedAt: p.publishedAt ? p.publishedAt.toISOString() : null,
   }));
 
-  const cats = categories.map((c) => ({
+  const cats = categories.map((c: typeof categories[number]) => ({
     id: c.id,
     name: c.name,
     slug: c.slug,
