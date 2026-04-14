@@ -109,9 +109,10 @@ export default async function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative min-h-[75vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden">
-        {/* Base gradient */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(145deg, #0d2d5e 0%, #1F4788 45%, #163a6e 100%)" }} />
+      {/* Drop /public/images/hero-bg.jpg to enable photo background */}
+      <section className="relative min-h-[75vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden hero-section">
+        {/* Base gradient (shows if no bg image; acts as overlay when image exists) */}
+        <div className="absolute inset-0 hero-overlay" style={{ background: "linear-gradient(145deg, rgba(13,45,94,0.92) 0%, rgba(31,71,136,0.85) 45%, rgba(22,58,110,0.92) 100%)" }} />
 
         {/* Dot grid */}
         <div className="absolute inset-0 bg-dots-white" />

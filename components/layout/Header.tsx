@@ -35,7 +35,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-white font-bold text-xl tracking-wide">
+            <span className="text-white font-bold text-xl tracking-tight font-display">
               ASCEND<span className="text-[#4CAF50]">360</span>
             </span>
           </Link>
