@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Save, Eye, Trash2, AlertCircle } from "lucide-react";
 import { blogPostSchema, type BlogPostFormData } from "@/lib/validations";
 import { slugify } from "@/lib/utils";
+import ImageUpload from "@/components/ui/ImageUpload";
 
 interface Category {
   id: string;
@@ -289,15 +290,12 @@ export default function BlogPostEditor({ postId, initialData, categories }: Prop
             <h3 className="font-semibold text-[#1F4788] mb-4 text-sm">
               Featured Image
             </h3>
-            <input
-              type="url"
-              placeholder="https://... (image URL)"
-              {...register("featuredImage")}
-              className="w-full px-3 py-2 border border-[#ddd] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1F4788]"
+            <ImageUpload
+              value={watch("featuredImage") || ""}
+              onChange={(url) => setValue("featuredImage", url, { shouldDirty: true })}
+              folder="blog"
+              label="Featured Image"
             />
-            <p className="text-xs text-[#999] mt-1.5">
-              Paste an image URL. S3 upload coming soon.
-            </p>
           </div>
 
           {/* Delete */}

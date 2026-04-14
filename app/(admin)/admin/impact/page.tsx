@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import AdminSidebar from "@/components/layout/AdminSidebar";
 import { Plus, Edit, Trash2, Eye, EyeOff } from "lucide-react";
 import { formatDateShort } from "@/lib/utils";
+import ImageUpload from "@/components/ui/ImageUpload";
 
 interface ImpactStory {
   id: string;
@@ -253,7 +254,6 @@ export default function AdminImpactPage() {
                 { label: "Student Name", field: "studentName", type: "text", required: true },
                 { label: "Story Title", field: "storyTitle", type: "text", required: true },
                 { label: "Outcome (e.g. Won Mastercard Scholarship)", field: "outcome", type: "text" },
-                { label: "Photo URL", field: "imageUrl", type: "url" },
               ].map(({ label, field, type, required }) => (
                 <div key={field}>
                   <label className="block text-sm font-medium text-[#333] mb-1.5">
@@ -267,6 +267,15 @@ export default function AdminImpactPage() {
                   />
                 </div>
               ))}
+              <div>
+                <label className="block text-sm font-medium text-[#333] mb-1.5">Photo</label>
+                <ImageUpload
+                  value={form.imageUrl}
+                  onChange={(url) => setForm((f) => ({ ...f, imageUrl: url }))}
+                  folder="impact"
+                  label="Student photo"
+                />
+              </div>
               <div>
                 <label className="block text-sm font-medium text-[#333] mb-1.5">
                   Story Content <span className="text-red-500">*</span>

@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import AdminSidebar from "@/components/layout/AdminSidebar";
 import { Plus, Edit, Trash2, ExternalLink, Mail, ToggleLeft, ToggleRight } from "lucide-react";
+import ImageUpload from "@/components/ui/ImageUpload";
 
 interface TeamMember {
   id: string;
@@ -285,7 +286,6 @@ export default function AdminTeamPage() {
               {[
                 { label: "Full Name", field: "name", type: "text", required: true },
                 { label: "Title / Role", field: "title", type: "text", required: true },
-                { label: "Photo URL", field: "imageUrl", type: "url" },
                 { label: "LinkedIn URL", field: "linkedinUrl", type: "url" },
                 { label: "Email", field: "email", type: "email" },
               ].map(({ label, field, type, required }) => (
@@ -301,6 +301,15 @@ export default function AdminTeamPage() {
                   />
                 </div>
               ))}
+              <div>
+                <label className="block text-sm font-medium text-[#333] mb-1.5">Photo</label>
+                <ImageUpload
+                  value={form.imageUrl}
+                  onChange={(url) => setForm((f) => ({ ...f, imageUrl: url }))}
+                  folder="team"
+                  label="Team member photo"
+                />
+              </div>
               <div>
                 <label className="block text-sm font-medium text-[#333] mb-1.5">Role Type</label>
                 <select
