@@ -201,7 +201,7 @@ export default async function BlogPostPage({ params }: Props) {
                   Related Posts
                 </h3>
                 <div className="space-y-4">
-                  {related.map((r) => (
+                  {related.map((r: typeof related[number]) => (
                     <Link
                       key={r.id}
                       href={`/blog/${r.slug}`}
