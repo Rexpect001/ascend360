@@ -12,6 +12,7 @@ import {
   ChevronRight,
   type LucideIcon,
 } from "lucide-react";
+import CountUpStat from "@/components/ui/CountUpStat";
 import { prisma } from "@/lib/prisma";
 import { formatDateShort, estimateReadTime } from "@/lib/utils";
 
@@ -61,10 +62,10 @@ async function getHomepageData() {
 }
 
 const stats = [
-  { value: "500+", label: "Students Reached", icon: Users },
-  { value: "10+", label: "Scholarships Won", icon: Award },
-  { value: "5+", label: "Partner Organizations", icon: Handshake },
-  { value: "3", label: "SDGs Targeted", icon: Globe },
+  { end: 500, suffix: "+", label: "Students Reached", sub: "Across all 36 states via virtual sessions", icon: Users },
+  { end: 10, suffix: "+", label: "Scholarships Won", sub: "Including Mastercard Foundation awards", icon: Award },
+  { end: 5, suffix: "+", label: "Partner Organizations", sub: "NGOs, universities & corporates", icon: Handshake },
+  { end: 3, suffix: "", label: "SDGs Targeted", sub: "Education, poverty & climate action", icon: Globe },
 ];
 
 const sdgProjects: SdgProject[] = [
@@ -135,7 +136,7 @@ export default async function HomePage() {
             <span>🇳🇬</span>
             <span>Registered Nigerian NGO · SDG 4 · SDG 1 · SDG 13</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
             Empowering Africa&apos;s{" "}
             <span className="text-[#4CAF50] relative">
               Next Generation
@@ -144,7 +145,7 @@ export default async function HomePage() {
               </svg>
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
             ASCEND360 is a Nigerian NGO committed to education access, poverty
             reduction, and environmental action — turning potential into
             achievement for students across Nigeria.
@@ -181,10 +182,10 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-dots opacity-60" />
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <p className="text-[#4CAF50] font-semibold uppercase tracking-widest text-sm mb-3">Our Purpose</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1F4788] mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#1F4788] mb-6">
             Why ASCEND360 Exists
           </h2>
-          <p className="text-lg text-[#555] leading-relaxed max-w-3xl mx-auto mb-4">
+          <p className="text-lg md:text-xl text-[#555] leading-relaxed max-w-3xl mx-auto mb-4">
             Millions of talented Nigerian students lack access to information about
             scholarships, global opportunities, and career pathways. ASCEND360 was
             founded to close that gap — equipping young people with the knowledge,
@@ -205,38 +206,43 @@ export default async function HomePage() {
       </section>
 
       {/* ── IMPACT STATS ── */}
-      <section className="relative py-20 overflow-hidden">
-        {/* Dark gradient background with grid */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #0d2d5e 0%, #1F4788 100%)" }} />
-        <div className="absolute inset-0 bg-grid-white" />
+      <section className="relative py-24 px-4 overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-dots opacity-40" />
+        {/* Faint green accent orb */}
+        <div className="orb w-96 h-96 bg-[#4CAF50] top-[-80px] right-[-60px] opacity-[0.06] animate-float-a" />
 
-        {/* Decorative orbs */}
-        <div className="orb w-64 h-64 bg-[#4CAF50] top-[-40px] right-[10%] opacity-[0.08] animate-float-b" />
-        <div className="orb w-48 h-48 bg-white bottom-[-20px] left-[5%] opacity-[0.06] animate-float-c" />
-
-        <div className="relative z-10 max-w-5xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-[#4CAF50] font-semibold uppercase tracking-widest text-sm mb-2">Impact So Far</p>
-            <h2 className="text-3xl font-bold text-white">Numbers That Matter</h2>
+        <div className="relative z-10 max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[#4CAF50] font-semibold uppercase tracking-widest text-sm mb-3">Impact So Far</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1F4788] mb-3">Numbers That Matter</h2>
+            <p className="text-[#666] max-w-md mx-auto">Real outcomes, measured — because every number is a life changed.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map(({ value, label, icon: Icon }) => (
-              <div key={label} className="text-center bg-white/8 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/12 transition-colors">
-                <div className="w-14 h-14 bg-[#4CAF50]/20 border border-[#4CAF50]/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon size={24} className="text-[#4CAF50]" />
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6">
+            {stats.map(({ end, suffix, label, sub, icon: Icon }) => (
+              <div key={label} className="text-center group">
+                {/* Icon */}
+                <div className="w-14 h-14 bg-[#1F4788]/8 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#1F4788]/14 transition-colors">
+                  <Icon size={26} className="text-[#1F4788]" />
                 </div>
-                <p className="text-4xl font-extrabold text-white mb-1">{value}</p>
-                <p className="text-sm text-blue-200 font-medium">{label}</p>
+                {/* Count-up number */}
+                <p className="text-5xl md:text-6xl font-extrabold text-[#4CAF50] mb-1 font-display leading-none">
+                  <CountUpStat end={end} suffix={suffix} duration={2000} />
+                </p>
+                {/* Divider */}
+                <div className="w-8 h-0.5 bg-[#4CAF50]/30 mx-auto my-2" />
+                {/* Label */}
+                <p className="font-bold text-[#1F4788] text-base mb-1">{label}</p>
+                <p className="text-[#888] text-xs leading-snug">{sub}</p>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* Wave bottom */}
-        <div className="wave-bottom">
-          <svg viewBox="0 0 1440 60" className="w-full" preserveAspectRatio="none" style={{ display: "block" }}>
-            <path d="M0,60 L0,30 Q360,60 720,20 Q1080,0 1440,35 L1440,60 Z" fill="white" />
-          </svg>
+          <div className="text-center mt-14">
+            <Link href="/impact" className="inline-flex items-center gap-2 text-[#4CAF50] font-semibold hover:underline">
+              See our full impact story <ChevronRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -246,7 +252,7 @@ export default async function HomePage() {
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-[#4CAF50] font-semibold uppercase tracking-widest text-sm mb-3">What We Do</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1F4788] mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#1F4788] mb-4">
               Our Programs
             </h2>
             <p className="text-[#666] max-w-xl mx-auto">
@@ -303,23 +309,23 @@ export default async function HomePage() {
       </section>
 
       {/* ── XCEL360 FEATURE SPOTLIGHT ── */}
-      <section className="relative bg-[#1F4788] py-20 px-4 text-white overflow-hidden">
-        {/* Background layers */}
-        <div className="absolute inset-0 bg-grid-white" />
-        <div className="orb w-96 h-96 bg-[#4CAF50] top-[-80px] right-[-60px] opacity-[0.08] animate-float-a" />
-        <div className="orb w-72 h-72 bg-[#2196F3] bottom-[-40px] left-[-40px] opacity-[0.10] animate-float-b" />
+      <section className="relative py-20 px-4 overflow-hidden" style={{ backgroundColor: "#F0F4FF" }}>
+        {/* Subtle background patterns */}
+        <div className="absolute inset-0 bg-crosshatch" />
+        <div className="orb w-96 h-96 bg-[#4CAF50] top-[-80px] right-[-60px] opacity-[0.07] animate-float-a" />
+        <div className="orb w-72 h-72 bg-[#1F4788] bottom-[-40px] left-[-40px] opacity-[0.05] animate-float-b" />
 
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-[#4CAF50] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wider shadow-lg shadow-green-900/30">
+              <div className="inline-flex items-center gap-2 bg-[#4CAF50] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wider shadow-md shadow-green-200">
                 <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse-glow" />
                 Flagship Program
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1F4788] mb-5 leading-tight">
                 Xcel360: Opening Doors to<br className="hidden md:block" /> Global Opportunities
               </h2>
-              <p className="text-blue-100 leading-relaxed mb-6">
+              <p className="text-[#555] leading-relaxed mb-6 text-base">
                 Through virtual sessions on Twitter/X Spaces, Xcel360 has
                 reached over 500 students across Nigeria with life-changing
                 information about scholarships, AI skills, and career
@@ -327,41 +333,42 @@ export default async function HomePage() {
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "Virtual learning sessions every 2-3 months",
+                  "Virtual learning sessions every 2–3 months",
                   "Annual Presentation Day showcasing student talent",
                   "1-on-1 mentorship with industry professionals",
                   "Direct scholarship and opportunity referrals",
                 ].map((item: string) => (
                   <li key={item} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#4CAF50] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm shadow-green-900/30">
+                    <div className="w-5 h-5 rounded-full bg-[#4CAF50] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm shadow-green-200">
                       <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none">
                         <path d="M10 3L5 8.5 2 5.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
-                    <span className="text-blue-100 text-sm">{item}</span>
+                    <span className="text-[#444] text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
-              <Link href="/projects/xcel360" className="btn-primary shadow-lg shadow-green-900/30">
+              <Link href="/projects/xcel360" className="btn-primary">
                 Join Xcel360 <ArrowRight size={18} />
               </Link>
             </div>
 
-            {/* Stats grid with glass effect */}
-            <div className="grid grid-cols-2 gap-4">
+            {/* Stats — 2×2 grid, no glass boxes, clean numbers */}
+            <div className="grid grid-cols-2 gap-6">
               {[
-                { value: "500+", label: "Students Reached", color: "#4CAF50" },
-                { value: "2.5hr", label: "Per Session", color: "#64B5F6" },
-                { value: "10+", label: "Scholarships Won", color: "#FFB74D" },
-                { value: "Annual", label: "Presentation Day", color: "#CE93D8" },
-              ].map(({ value, label, color }) => (
+                { end: 500, suffix: "+", label: "Students Reached", color: "#4CAF50" },
+                { end: 25, suffix: "hrs", label: "Content Delivered", color: "#1F4788" },
+                { end: 10, suffix: "+", label: "Scholarships Won", color: "#FF9800" },
+                { end: 1, suffix: "", label: "Annual Presentation Day", color: "#9C27B0" },
+              ].map(({ end, suffix, label, color }) => (
                 <div
                   key={label}
-                  className="relative bg-white/8 backdrop-blur-sm rounded-xl p-6 text-center border border-white/15 overflow-hidden group hover:bg-white/14 transition-colors"
+                  className="bg-white rounded-2xl p-6 text-center shadow-[0_2px_12px_rgba(31,71,136,0.08)] hover:shadow-[0_4px_20px_rgba(31,71,136,0.14)] transition-shadow"
                 >
-                  <div className="absolute inset-0 bg-dots-white opacity-50" />
-                  <p className="relative text-3xl font-extrabold mb-1" style={{ color }}>{value}</p>
-                  <p className="relative text-blue-200 text-sm">{label}</p>
+                  <p className="text-4xl font-extrabold mb-1 font-display leading-none" style={{ color }}>
+                    <CountUpStat end={end} suffix={suffix} duration={1800} />
+                  </p>
+                  <p className="text-[#555] text-sm font-medium mt-1">{label}</p>
                 </div>
               ))}
             </div>

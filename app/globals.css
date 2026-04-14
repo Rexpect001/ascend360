@@ -17,11 +17,11 @@
   --font-display: var(--font-heading, "Plus Jakarta Sans"), ui-sans-serif, system-ui, sans-serif;
 
   /* Font sizes */
-  --text-h1: 3rem;
-  --text-h2: 2.25rem;
-  --text-h3: 1.75rem;
-  --text-body: 1rem;
-  --text-sm: 0.875rem;
+  --text-h1: 3.5rem;
+  --text-h2: 2.625rem;
+  --text-h3: 2rem;
+  --text-body: 1.0625rem;
+  --text-sm: 0.9375rem;
 
   /* Shadows */
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -40,7 +40,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  line-height: 1.6;
+  font-size: var(--text-body);
+  line-height: 1.65;
   font-feature-settings: "ss01", "ss02";
   -webkit-font-smoothing: antialiased;
 }
