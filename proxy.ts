@@ -1,48 +1,63 @@
 import { NextRequest, NextResponse } from "next/server";
-import { verifyAccessToken } from "@/lib/auth";
+import { jwtVerify } from "jose";
 
-const ADMIN_PATHS = ["/admin"];
 const PUBLIC_ADMIN_PATHS = ["/admin/login"];
 
-export function proxy(request: NextRequest) {
+function isPublic(pathname: string) {
+  return PUBLIC_ADMIN_PATHS.some((p) => pathname === p || pathname.startsWith(p + "/"));
+}
+
+async function verifyToken(token: string) {
+  try {
+    const secret = new TextEncoder().encode(process.env.JWT_SECRET!);
+    const { payload } = await jwtVerify(token, secret);
+    return payload as { userId: string; email: string; role: string; name: string };
+  } catch {
+    return null;
+  }
+}
+
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Only run on admin paths
-  if (!pathname.startsWith("/admin")) {
-    return NextResponse.next();
-  }
+  if (!pathname.startsWith("/admin")) return NextResponse.next();
 
-  // Allow login page
-  if (PUBLIC_ADMIN_PATHS.some((p) => pathname.startsWith(p))) {
-    return NextResponse.next();
-  }
-
-  // Check access token
   const token = request.cookies.get("access_token")?.value;
 
-  if (!token) {
-    return NextResponse.redirect(new URL("/admin/login", request.url));
+  // Login page: redirect to dashboard if already authenticated
+  if (isPublic(pathname)) {
+    if (token && (await verifyToken(token))) {
+      return NextResponse.redirect(new URL("/admin", request.url));
+    }
+    return NextResponse.next();
   }
 
-  const payload = verifyAccessToken(token);
+  // All other admin routes require a valid token
+  if (!token) {
+    const loginUrl = new URL("/admin/login", request.url);
+    loginUrl.searchParams.set("redirect", pathname);
+    return NextResponse.redirect(loginUrl);
+  }
+
+  const payload = await verifyToken(token);
 
   if (!payload) {
-    // Try refresh flow: redirect to a refresh endpoint
-    const response = NextResponse.redirect(new URL("/admin/login", request.url));
-    response.cookies.delete("access_token");
-    return response;
+    const loginUrl = new URL("/admin/login", request.url);
+    loginUrl.searchParams.set("redirect", pathname);
+    const res = NextResponse.redirect(loginUrl);
+    res.cookies.delete("access_token");
+    res.cookies.delete("refresh_token");
+    return res;
   }
 
-  // Inject user info into request headers for use in server components
+  // Inject user info as headers for server components
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-user-id", payload.userId);
   requestHeaders.set("x-user-role", payload.role);
   requestHeaders.set("x-user-name", payload.name);
   requestHeaders.set("x-user-email", payload.email);
 
-  return NextResponse.next({
-    request: { headers: requestHeaders },
-  });
+  return NextResponse.next({ request: { headers: requestHeaders } });
 }
 
 export const config = {
