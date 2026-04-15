@@ -45,14 +45,14 @@ export const metadata: Metadata = {
     title: "ASCEND360 | Education Access, Poverty Reduction & Climate Action",
     description:
       "A Nigerian NGO committed to education access, poverty reduction, and environmental action — empowering communities through Xcel360 and beyond.",
-    images: [{ url: "/images/og-default.png", width: 1200, height: 630, alt: "ASCEND360" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "ASCEND360" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ASCEND360 | Education Access, Poverty Reduction & Climate Action",
     description:
       "A Nigerian NGO committed to education access, poverty reduction, and environmental action.",
-    images: ["/images/og-default.png"],
+    images: ["/opengraph-image"],
   },
 };
 
