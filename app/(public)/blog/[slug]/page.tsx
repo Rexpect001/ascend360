@@ -137,7 +137,7 @@ export default async function BlogPostPage({ params }: Props) {
             {/* Content */}
             <div
               className="prose"
-              dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, "<br />") }}
+              dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
             {/* Author bio card */}

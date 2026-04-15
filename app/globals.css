@@ -116,6 +116,61 @@ h3 {
   text-decoration: underline;
 }
 
+.prose strong {
+  font-weight: 700;
+  color: #1F4788;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose s {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.prose code {
+  font-family: ui-monospace, "Cascadia Code", Menlo, monospace;
+  font-size: 0.875em;
+  background: #f0f4ff;
+  color: #1F4788;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+.prose pre {
+  background: #1a2744;
+  color: #e8eef8;
+  padding: 1.25rem 1.5rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.prose pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+.prose hr {
+  border: none;
+  border-top: 2px solid #eee;
+  margin: 2rem 0;
+}
+
+.prose img {
+  border-radius: 6px;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  display: block;
+}
+
 .prose blockquote {
   border-left: 4px solid #4CAF50;
   padding-left: 1rem;

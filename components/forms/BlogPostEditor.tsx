@@ -8,6 +8,7 @@ import { Save, Eye, Trash2, AlertCircle } from "lucide-react";
 import { blogPostSchema, type BlogPostFormData } from "@/lib/validations";
 import { slugify } from "@/lib/utils";
 import ImageUpload from "@/components/ui/ImageUpload";
+import RichTextEditor from "@/components/ui/RichTextEditor";
 
 interface Category {
   id: string;
@@ -174,11 +175,10 @@ export default function BlogPostEditor({ postId, initialData, categories }: Prop
             <label className="block text-sm font-medium text-[#333] mb-1.5">
               Content <span className="text-red-500">*</span>
             </label>
-            <textarea
-              rows={20}
-              placeholder="Write your post content here... (Markdown supported)"
-              {...register("content")}
-              className="w-full px-4 py-3 border border-[#ddd] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1F4788] font-mono resize-y"
+            <RichTextEditor
+              value={watch("content") || ""}
+              onChange={(html) => setValue("content", html, { shouldDirty: true, shouldValidate: true })}
+              placeholder="Write your post content here…"
             />
             {errors.content && (
               <p className="text-red-500 text-xs mt-1">{errors.content.message}</p>
