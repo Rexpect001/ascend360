@@ -24,6 +24,7 @@ export default async function AdminUsersPage() {
 
   const userName = headerStore.get("x-user-name") || "Admin";
   const userEmail = headerStore.get("x-user-email") || "";
+  const currentUserId = headerStore.get("x-user-id") || "";
   const users = await getUsers();
 
   return (
@@ -35,7 +36,7 @@ export default async function AdminUsersPage() {
           <p className="text-sm text-[#666]">{users.length} admin users</p>
         </header>
         <main className="p-8">
-          <AdminUsersClient users={users} />
+          <AdminUsersClient users={users} currentUserId={currentUserId} />
         </main>
       </div>
     </div>

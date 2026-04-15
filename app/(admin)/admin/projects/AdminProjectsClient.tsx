@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Edit, Save, X } from "lucide-react";
+import ImageUpload from "@/components/ui/ImageUpload";
 
 interface Project {
   id: string;
@@ -9,6 +10,8 @@ interface Project {
   slug: string;
   description: string;
   longDescription: string | null;
+  featuredImage: string | null;
+  heroImage: string | null;
   status: string;
   sdgAlignment: string | null;
 }
@@ -27,7 +30,13 @@ export default function AdminProjectsClient({ projects: initial }: { projects: P
 
   function startEdit(p: Project) {
     setEditing(p.id);
-    setForm({ description: p.description, longDescription: p.longDescription || "", status: p.status });
+    setForm({
+      description: p.description,
+      longDescription: p.longDescription || "",
+      status: p.status,
+      featuredImage: p.featuredImage || "",
+      heroImage: p.heroImage || "",
+    });
   }
 
   async function saveEdit(id: string) {
@@ -108,6 +117,26 @@ export default function AdminProjectsClient({ projects: initial }: { projects: P
                   onChange={(e) => setForm((f) => ({ ...f, longDescription: e.target.value }))}
                   className="w-full px-3 py-2 border border-[#ddd] rounded text-sm resize-y"
                 />
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-medium text-[#555] mb-1">Featured Image</label>
+                  <ImageUpload
+                    value={form.featuredImage ?? ""}
+                    onChange={(url) => setForm((f) => ({ ...f, featuredImage: url }))}
+                    folder="projects"
+                    label="Featured image"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-medium text-[#555] mb-1">Hero Image</label>
+                  <ImageUpload
+                    value={form.heroImage ?? ""}
+                    onChange={(url) => setForm((f) => ({ ...f, heroImage: url }))}
+                    folder="projects"
+                    label="Hero image"
+                  />
+                </div>
               </div>
               <button
                 onClick={() => saveEdit(p.id)}

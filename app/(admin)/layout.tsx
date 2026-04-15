@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import "../../app/globals.css";
+import TokenRefresher from "@/components/ui/TokenRefresher";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,10 @@ export default function AdminLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body>{children}</body>
+      <body>
+        <TokenRefresher />
+        {children}
+      </body>
     </html>
   );
 }

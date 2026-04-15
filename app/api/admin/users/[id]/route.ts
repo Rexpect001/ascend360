@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/auth";
+import { requireAdmin, hashPassword, validatePassword } from "@/lib/auth";
 
 export async function PUT(
   request: NextRequest,
@@ -11,6 +11,15 @@ export async function PUT(
 
   const { id } = await params;
   const body = await request.json();
+
+  // Admin password reset (no current password required)
+  if (body.newPassword) {
+    const err = validatePassword(body.newPassword);
+    if (err) return NextResponse.json({ error: err }, { status: 400 });
+    const passwordHash = await hashPassword(body.newPassword);
+    await prisma.user.update({ where: { id }, data: { passwordHash } });
+    return NextResponse.json({ success: true });
+  }
 
   const user = await prisma.user.update({
     where: { id },
