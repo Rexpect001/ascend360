@@ -59,7 +59,7 @@ export default function AdminSidebar({ userRole, userName, userEmail }: AdminSid
       <div className="flex items-center justify-between h-16 px-4 border-b border-blue-600">
         {!collapsed && (
           <Link href="/admin" className="font-bold text-lg">
-            ASCEND<span className="text-[#4CAF50]">360</span>
+            ascend<span className="text-[#4CAF50]">360</span>
             <span className="text-blue-300 text-xs ml-1">Admin</span>
           </Link>
         )}

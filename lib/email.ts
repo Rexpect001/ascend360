@@ -52,7 +52,7 @@ export async function sendContactNotification(data: {
     from: FROM,
     to: ORG_EMAIL,
     replyTo: data.email,
-    subject: `[ASCEND360] New ${label} from ${data.name}`,
+    subject: `[ascend360] New ${label} from ${data.name}`,
     html: `
       <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#333">
         <div style="background:#1F4788;padding:24px 32px;border-radius:8px 8px 0 0">
@@ -92,7 +92,7 @@ export async function sendContactAutoReply(data: {
   await getResend()!.emails.send({
     from: FROM,
     to: data.email,
-    subject: "We've received your message — ASCEND360",
+    subject: "We've received your message — ascend360",
     html: `
       <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#333">
         <div style="background:#1F4788;padding:24px 32px;border-radius:8px 8px 0 0">
@@ -106,7 +106,7 @@ export async function sendContactAutoReply(data: {
           </div>
           <hr style="border:none;border-top:1px solid #eee"/>
           <p style="font-size:13px;color:#666;line-height:1.6">
-            ASCEND360 is a registered Nigerian NGO committed to education access, poverty reduction, and environmental action.
+            ascend360 is a registered Nigerian NGO committed to education access, poverty reduction, and environmental action.
           </p>
           <p style="font-size:12px;color:#999">
             This is an automated confirmation. Please do not reply to this email — reply to <a href="mailto:${ORG_EMAIL}" style="color:#4CAF50">${ORG_EMAIL}</a> to reach us directly.

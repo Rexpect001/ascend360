@@ -23,7 +23,7 @@ export default async function AdminSettingsPage() {
             <h2 className="font-bold text-[#1F4788] mb-4">Site Information</h2>
             <div className="space-y-4">
               {[
-                { label: "Site Name", value: "ASCEND360" },
+                { label: "Site Name", value: "ascend360" },
                 { label: "Contact Email", value: "info@ascend360.org" },
                 { label: "Site URL", value: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000" },
               ].map(({ label, value }) => (

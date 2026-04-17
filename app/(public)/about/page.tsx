@@ -4,7 +4,7 @@ import AboutContent from "./AboutContent";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about ASCEND360's mission, vision, founding story, and the 9 strategic objectives driving our work across Nigeria.",
+    "Learn about ascend360's mission, vision, founding story, and the 9 strategic objectives driving our work across Nigeria.",
 };
 
 export default function AboutPage() {
@@ -25,7 +25,7 @@ export default function AboutPage() {
             Our Story
           </p>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-5 leading-tight">
-            About ASCEND360
+            About ascend360
           </h1>
           <p className="text-blue-100 text-xl leading-relaxed max-w-2xl mx-auto">
             A Nigerian NGO founded on the belief that access to information

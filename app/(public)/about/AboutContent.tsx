@@ -69,20 +69,20 @@ const problemStats = [
 ];
 
 const timelineEvents = [
-  { year: "2022", quarter: "Q1", title: "ASCEND360 Founded", desc: "Johnson Alabi, Seun, and Akindoyin come together around a shared conviction: information access is the missing link for Nigerian students.", color: "#4CAF50" },
+  { year: "2022", quarter: "Q1", title: "ascend360 Founded", desc: "Johnson Alabi, Seun, and Akindoyin come together around a shared conviction: information access is the missing link for Nigerian students.", color: "#4CAF50" },
   { year: "2022", quarter: "Q2", title: "First Xcel360 Session", desc: "Xcel360 launches on Twitter/X Spaces. Over 80 students attend the inaugural session — beyond all expectations.", color: "#2196F3" },
-  { year: "2022", quarter: "Q4", title: "Scholarship Referrals Begin", desc: "First direct scholarship referrals made. Students begin applying to Mastercard Foundation, Chevening, and other programmes with ASCEND360 guidance.", color: "#FF9800" },
+  { year: "2022", quarter: "Q4", title: "Scholarship Referrals Begin", desc: "First direct scholarship referrals made. Students begin applying to Mastercard Foundation, Chevening, and other programmes with ascend360 guidance.", color: "#FF9800" },
   { year: "2023", quarter: "Q2", title: "300+ Students Reached", desc: "First Mastercard Foundation scholars produced. Word spreads through social media — attendance doubles each session.", color: "#9C27B0" },
-  { year: "2024", quarter: "Q1", title: "Formally Registered NGO", desc: "ASCEND360 receives official registration. Launches Annual Presentation Day — a flagship showcase of student talent and achievement.", color: "#E91E63" },
+  { year: "2024", quarter: "Q1", title: "Formally Registered NGO", desc: "ascend360 receives official registration. Launches Annual Presentation Day — a flagship showcase of student talent and achievement.", color: "#E91E63" },
   { year: "2024", quarter: "Q3", title: "500+ Students · 10+ Scholarships", desc: "Half a thousand students reached across all 36 Nigerian states. Ten-plus scholarships won. The model is proven.", color: "#4CAF50" },
-  { year: "2025", quarter: "Now", title: "Three SDG Programs", desc: "ASCEND360 expands its mandate: SDG 4 (Education), SDG 1 (Poverty Reduction), and SDG 13 (Climate Action) — all in active development.", color: "#1F4788" },
+  { year: "2025", quarter: "Now", title: "Three SDG Programs", desc: "ascend360 expands its mandate: SDG 4 (Education), SDG 1 (Poverty Reduction), and SDG 13 (Climate Action) — all in active development.", color: "#1F4788" },
 ];
 
 type Founder = { name: string; title: string; bio: string; initials: string; color: string };
 const founders: Founder[] = [
-  { name: "Johnson Alabi", title: "President & Co-Founder", initials: "JA", color: "#1F4788", bio: "The visionary force behind ASCEND360. After witnessing first-hand how information transforms lives, Johnson founded the organisation with one mission: ensure no Nigerian student is left behind for lack of a mentor. Under his leadership, Xcel360 has reached 500+ students across all 36 states." },
-  { name: "Seun", title: "Co-Founder & Director of Programs", initials: "S", color: "#4CAF50", bio: "The architect of ASCEND360's programmes. Seun ensures every initiative is grounded in real student needs — designing experiences that are practical, accessible, and transformative. Deep expertise in community development and social programme management." },
-  { name: "Akindoyin", title: "Co-Founder & Director of Partnerships", initials: "A", color: "#FF9800", bio: "The bridge-builder. Akindoyin manages ASCEND360's strategic partnerships with corporations, international organisations, and academic institutions — creating the scholarship pathways and funding relationships that sustain the mission." },
+  { name: "Johnson Alabi", title: "President & Co-Founder", initials: "JA", color: "#1F4788", bio: "The visionary force behind ascend360. After witnessing first-hand how information transforms lives, Johnson founded the organisation with one mission: ensure no Nigerian student is left behind for lack of a mentor. Under his leadership, Xcel360 has reached 500+ students across all 36 states." },
+  { name: "Seun", title: "Co-Founder & Director of Programs", initials: "S", color: "#4CAF50", bio: "The architect of ascend360's programmes. Seun ensures every initiative is grounded in real student needs — designing experiences that are practical, accessible, and transformative. Deep expertise in community development and social programme management." },
+  { name: "Akindoyin", title: "Co-Founder & Director of Partnerships", initials: "A", color: "#FF9800", bio: "The bridge-builder. Akindoyin manages ascend360's strategic partnerships with corporations, international organisations, and academic institutions — creating the scholarship pathways and funding relationships that sustain the mission." },
 ];
 
 type Objective = { number: string; title: string; desc: string; icon: LucideIcon; color: string; bg: string };
@@ -274,7 +274,7 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* ── WHY NIGERIA NEEDS ASCEND360 ── */}
+      {/* ── WHY NIGERIA NEEDS ascend360 ── */}
       <section className="relative py-24 px-4 overflow-hidden" style={{ background: "linear-gradient(135deg, #0d2d5e 0%, #1F4788 100%)" }}>
         <div className="absolute inset-0 bg-grid-white" />
         <div className="orb w-96 h-96 bg-[#4CAF50] top-[-80px] right-[-60px] opacity-[0.08] animate-float-a" />
@@ -282,7 +282,7 @@ export default function AboutContent() {
         <div className="relative z-10 max-w-6xl mx-auto">
           <FadeUp className="text-center mb-16">
             <p className="text-[#4CAF50] font-semibold uppercase tracking-widest text-sm mb-3">The Problem We Solve</p>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Why Nigeria Needs ASCEND360</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Why Nigeria Needs ascend360</h2>
             <p className="text-blue-200 max-w-2xl mx-auto text-lg">
               The talent exists. The opportunities exist. The gap is information and access — and that is exactly what we bridge.
             </p>
@@ -302,7 +302,7 @@ export default function AboutContent() {
 
           <FadeUp delay={200} className="bg-white/8 border border-white/15 rounded-2xl p-8 max-w-3xl mx-auto text-center backdrop-blur-sm">
             <p className="text-blue-100 text-lg leading-relaxed italic">
-              &ldquo;When a student in Lagos wins a scholarship to study abroad, they don&apos;t just change their own life — they return with skills, networks, and ambition that transform their community. That is the ripple effect ASCEND360 is building.&rdquo;
+              &ldquo;When a student in Lagos wins a scholarship to study abroad, they don&apos;t just change their own life — they return with skills, networks, and ambition that transform their community. That is the ripple effect ascend360 is building.&rdquo;
             </p>
             <p className="text-[#4CAF50] font-bold mt-4">— Johnson Alabi, President &amp; Co-Founder</p>
           </FadeUp>
@@ -315,7 +315,7 @@ export default function AboutContent() {
           <FadeUp className="text-center mb-16">
             <p className="text-[#4CAF50] font-semibold uppercase tracking-widest text-sm mb-3">Our Journey</p>
             <h2 className="text-3xl md:text-5xl font-bold text-[#1F4788] mb-3">How We Got Here</h2>
-            <p className="text-[#666] max-w-xl mx-auto">From a single Twitter Space to a nationally registered NGO — the ASCEND360 story.</p>
+            <p className="text-[#666] max-w-xl mx-auto">From a single Twitter Space to a nationally registered NGO — the ascend360 story.</p>
           </FadeUp>
           <Timeline />
         </div>

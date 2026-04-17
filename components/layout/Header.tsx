@@ -36,7 +36,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <span className="text-white font-bold text-xl tracking-tight font-display">
-              ASCEND<span className="text-[#4CAF50]">360</span>
+              ascend<span className="text-[#4CAF50]">360</span>
             </span>
           </Link>
 

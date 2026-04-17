@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "ASCEND360's terms of service for using our website and programmes.",
+  description: "ascend360's terms of service for using our website and programmes.",
 };
 
 export default function TermsOfServicePage() {
@@ -22,14 +22,14 @@ export default function TermsOfServicePage() {
       <div className="prose text-[#444]">
         <h2>1. Acceptance of Terms</h2>
         <p>
-          By accessing or using the ASCEND360 website (ascend360.org) or
+          By accessing or using the ascend360 website (ascend360.org) or
           participating in our programmes, you agree to be bound by these Terms
           of Service. If you do not agree, please do not use our services.
         </p>
 
         <h2>2. Description of Services</h2>
         <p>
-          ASCEND360 provides free educational content, virtual learning
+          ascend360 provides free educational content, virtual learning
           sessions, mentorship connections, and related programme information
           for Nigerian students. We do not charge participants for access to
           Xcel360 sessions or mentorship.
@@ -44,7 +44,7 @@ export default function TermsOfServicePage() {
           </li>
           <li>Disrupt or interfere with our services or infrastructure</li>
           <li>
-            Copy, distribute, or misuse ASCEND360 content without permission
+            Copy, distribute, or misuse ascend360 content without permission
           </li>
           <li>
             Engage in harassment, discrimination, or abusive behaviour toward
@@ -55,7 +55,7 @@ export default function TermsOfServicePage() {
         <h2>4. Intellectual Property</h2>
         <p>
           All content on this website — including text, graphics, logos, and
-          programme materials — is owned by ASCEND360 or its content
+          programme materials — is owned by ascend360 or its content
           contributors and is protected by applicable copyright laws. You may
           share our content for non-commercial, educational purposes with
           attribution.
@@ -71,7 +71,7 @@ export default function TermsOfServicePage() {
 
         <h2>6. Limitation of Liability</h2>
         <p>
-          To the fullest extent permitted by law, ASCEND360 shall not be liable
+          To the fullest extent permitted by law, ascend360 shall not be liable
           for any indirect, incidental, special, or consequential damages
           arising from your use of our services or participation in our
           programmes.
@@ -87,7 +87,7 @@ export default function TermsOfServicePage() {
         <h2>8. Programme Participation</h2>
         <p>
           Participation in Xcel360 sessions and mentorship programmes is
-          voluntary. ASCEND360 reserves the right to remove participants who
+          voluntary. ascend360 reserves the right to remove participants who
           violate community standards or these Terms.
         </p>
 

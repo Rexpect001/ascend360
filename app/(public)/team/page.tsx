@@ -7,11 +7,11 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Our Team",
   description:
-    "Meet the trustees, staff, and mentors behind ASCEND360 — passionate Nigerians committed to education access and community development.",
-  keywords: ["ASCEND360 team", "Nigerian NGO founders", "education NGO leadership"],
+    "Meet the trustees, staff, and mentors behind ascend360 — passionate Nigerians committed to education access and community development.",
+  keywords: ["ascend360 team", "Nigerian NGO founders", "education NGO leadership"],
   openGraph: {
-    title: "Our Team | ASCEND360",
-    description: "Meet the trustees, staff, and mentors driving ASCEND360's mission.",
+    title: "Our Team | ascend360",
+    description: "Meet the trustees, staff, and mentors driving ascend360's mission.",
     url: "/team",
     images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],
   },

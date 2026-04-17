@@ -23,7 +23,7 @@ const roleLabels: Record<string, string> = {
 };
 
 const roleSubtitles: Record<string, string> = {
-  TRUSTEE: "The founders who built ASCEND360 from the ground up.",
+  TRUSTEE: "The founders who built ascend360 from the ground up.",
   STAFF: "The dedicated team driving our day-to-day operations.",
   MENTOR: "Industry professionals volunteering their expertise to guide our students.",
 };
@@ -31,7 +31,7 @@ const roleSubtitles: Record<string, string> = {
 const defaultMembers: Member[] = [
   { id: "1", name: "Johnson Alabi", title: "President & Co-Founder", roleType: "TRUSTEE", bio: "Passionate about education access and social equity across Nigeria.", imageUrl: null, linkedinUrl: null, email: null },
   { id: "2", name: "Seun", title: "Co-Founder & Director of Programs", roleType: "TRUSTEE", bio: "Driving programme development and student engagement across all 36 states.", imageUrl: null, linkedinUrl: null, email: null },
-  { id: "3", name: "Akindoyin", title: "Co-Founder & Director of Partnerships", roleType: "TRUSTEE", bio: "Building strategic relationships that amplify ASCEND360's reach and impact.", imageUrl: null, linkedinUrl: null, email: null },
+  { id: "3", name: "Akindoyin", title: "Co-Founder & Director of Partnerships", roleType: "TRUSTEE", bio: "Building strategic relationships that amplify ascend360's reach and impact.", imageUrl: null, linkedinUrl: null, email: null },
 ];
 
 /* ── MemberCard (hooks at top level) ─────────────────────────────────────── */

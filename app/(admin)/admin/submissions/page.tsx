@@ -233,7 +233,7 @@ export default function AdminSubmissionsPage() {
                       </p>
                       <div className="flex gap-3 mt-4">
                         <a
-                          href={`mailto:${sub.email}?subject=Re: Your ASCEND360 enquiry`}
+                          href={`mailto:${sub.email}?subject=Re: Your ascend360 enquiry`}
                           className="text-xs font-semibold text-[#4CAF50] border border-[#4CAF50] rounded px-3 py-1.5 hover:bg-[#4CAF50] hover:text-white transition-colors"
                         >
                           Reply via Email

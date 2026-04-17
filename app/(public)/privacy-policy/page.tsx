@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "ASCEND360's privacy policy — how we collect, use, and protect your data.",
+  description: "ascend360's privacy policy — how we collect, use, and protect your data.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
       <div className="prose text-[#444]">
         <h2>1. Introduction</h2>
         <p>
-          ASCEND360 (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is committed to protecting your
+          ascend360 (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is committed to protecting your
           personal information. This Privacy Policy explains how we collect,
           use, disclose, and safeguard your information when you visit our
           website ascend360.org or interact with our programmes.

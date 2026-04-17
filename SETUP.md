@@ -1,4 +1,4 @@
-# ASCEND360 — Development & Deployment Guide
+# ascend360 — Development & Deployment Guide
 
 ## Quick Start (Local Development)
 

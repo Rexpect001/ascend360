@@ -4,10 +4,10 @@ import ProjectsContent from "./ProjectsContent";
 export const metadata: Metadata = {
   title: "Our Projects",
   description:
-    "ASCEND360's three initiatives: Xcel360 (education), Poverty Reduction, and Climate Action — each aligned to a UN Sustainable Development Goal.",
+    "ascend360's three initiatives: Xcel360 (education), Poverty Reduction, and Climate Action — each aligned to a UN Sustainable Development Goal.",
   keywords: ["Xcel360", "SDG 4 Nigeria", "Nigerian NGO projects", "climate action Nigeria", "poverty reduction NGO"],
   openGraph: {
-    title: "Our Projects | ASCEND360",
+    title: "Our Projects | ascend360",
     description: "Three SDG-aligned initiatives: Xcel360, Poverty Reduction, and Climate Action.",
     url: "/projects",
     images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],

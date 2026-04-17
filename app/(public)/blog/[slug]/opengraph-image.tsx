@@ -23,8 +23,8 @@ export default async function BlogOGImage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const post = await getPost(slug);
 
-  const title = post?.title ?? "ASCEND360 Blog";
-  const author = post?.author?.name ?? "ASCEND360";
+  const title = post?.title ?? "ascend360 Blog";
+  const author = post?.author?.name ?? "ascend360";
 
   return new ImageResponse(
     (
@@ -83,7 +83,7 @@ export default async function BlogOGImage({ params }: { params: Promise<{ slug: 
               textTransform: "uppercase",
             }}
           >
-            ASCEND360 · Blog
+            ascend360 · Blog
           </div>
 
           {/* Title */}

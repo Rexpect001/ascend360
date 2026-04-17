@@ -4,10 +4,10 @@ import GetInvolvedContent from "./GetInvolvedContent";
 export const metadata: Metadata = {
   title: "Get Involved",
   description:
-    "Join ASCEND360 as a student, volunteer, mentor, or partner — and help expand education access across Nigeria.",
+    "Join ascend360 as a student, volunteer, mentor, or partner — and help expand education access across Nigeria.",
   keywords: ["volunteer Nigeria NGO", "mentor Nigerian students", "partner with NGO", "scholarship programme Nigeria"],
   openGraph: {
-    title: "Get Involved | ASCEND360",
+    title: "Get Involved | ascend360",
     description: "Join as a student, volunteer, mentor, or partner — help expand education access across Nigeria.",
     url: "/get-involved",
     images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],

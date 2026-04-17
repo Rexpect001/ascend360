@@ -7,11 +7,11 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Insights, student stories, scholarship opportunities, and news from ASCEND360 — Nigeria's education access NGO.",
+    "Insights, student stories, scholarship opportunities, and news from ascend360 — Nigeria's education access NGO.",
   keywords: ["scholarship blog", "Nigerian students", "education news Nigeria", "Xcel360 blog"],
   openGraph: {
-    title: "Blog | ASCEND360",
-    description: "Insights, student stories, and scholarship opportunities from ASCEND360.",
+    title: "Blog | ascend360",
+    description: "Insights, student stories, and scholarship opportunities from ascend360.",
     url: "/blog",
     images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],
   },
@@ -85,7 +85,7 @@ export default async function BlogPage() {
           </h1>
           <p className="text-blue-100 text-lg leading-relaxed">
             Student success stories, scholarship opportunities, education
-            insights, and news from across the ASCEND360 community.
+            insights, and news from across the ascend360 community.
           </p>
         </div>
       </section>

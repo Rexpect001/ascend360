@@ -23,33 +23,33 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ascend360.org";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "ASCEND360 | Education Access, Poverty Reduction & Climate Action",
-    template: "%s | ASCEND360",
+    default: "ascend360 | Education Access, Poverty Reduction & Climate Action",
+    template: "%s | ascend360",
   },
   description:
-    "ASCEND360 is a Nigerian NGO committed to education access (SDG 4), poverty reduction, and environmental action — empowering communities through programmes like Xcel360.",
+    "ascend360 is a Nigerian NGO committed to education access (SDG 4), poverty reduction, and environmental action — empowering communities through programmes like Xcel360.",
   keywords: [
     "NGO Nigeria", "education access", "scholarship Nigeria", "SDG 4",
     "Xcel360", "Nigerian students", "poverty reduction", "climate action",
     "mentorship Nigeria", "Mastercard Foundation",
   ],
-  authors: [{ name: "ASCEND360" }],
-  creator: "ASCEND360",
-  publisher: "ASCEND360",
+  authors: [{ name: "ascend360" }],
+  creator: "ascend360",
+  publisher: "ascend360",
   robots: { index: true, follow: true },
   openGraph: {
-    siteName: "ASCEND360",
+    siteName: "ascend360",
     locale: "en_NG",
     type: "website",
     url: SITE_URL,
-    title: "ASCEND360 | Education Access, Poverty Reduction & Climate Action",
+    title: "ascend360 | Education Access, Poverty Reduction & Climate Action",
     description:
       "A Nigerian NGO committed to education access, poverty reduction, and environmental action — empowering communities through Xcel360 and beyond.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "ASCEND360" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "ascend360" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ASCEND360 | Education Access, Poverty Reduction & Climate Action",
+    title: "ascend360 | Education Access, Poverty Reduction & Climate Action",
     description:
       "A Nigerian NGO committed to education access, poverty reduction, and environmental action.",
     images: ["/opengraph-image"],
@@ -59,11 +59,11 @@ export const metadata: Metadata = {
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "NGO",
-  name: "ASCEND360",
+  name: "ascend360",
   url: SITE_URL,
   logo: `${SITE_URL}/images/logo.png`,
   description:
-    "ASCEND360 is a registered Nigerian NGO committed to education access (SDG 4), poverty reduction (SDG 1), and environmental action (SDG 13).",
+    "ascend360 is a registered Nigerian NGO committed to education access (SDG 4), poverty reduction (SDG 1), and environmental action (SDG 13).",
   foundingDate: "2024",
   areaServed: "Nigeria",
   email: "info@ascend360.org",

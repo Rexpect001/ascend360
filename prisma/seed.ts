@@ -6,7 +6,7 @@ const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL! });
 const prisma = new PrismaClient({ adapter } as ConstructorParameters<typeof PrismaClient>[0]);
 
 async function main() {
-  console.log("🌱 Seeding ASCEND360 database...");
+  console.log("🌱 Seeding ascend360 database...");
 
   // ── Categories ──────────────────────────────────────────────────────────────
   const categories = await Promise.all([
@@ -23,7 +23,7 @@ async function main() {
     prisma.category.upsert({
       where: { slug: "news" },
       update: {},
-      create: { name: "News", slug: "news", description: "ASCEND360 news and announcements" },
+      create: { name: "News", slug: "news", description: "ascend360 news and announcements" },
     }),
     prisma.category.upsert({
       where: { slug: "student-stories" },
@@ -48,7 +48,7 @@ async function main() {
         slug: "xcel360",
         description:
           "Equipping students with information about global opportunities through virtual learning sessions on AI, scholarships, and career development.",
-        longDescription: `Xcel360 is ASCEND360's flagship education initiative, delivered via Twitter/X Spaces to reach students anywhere in Nigeria with just a smartphone.
+        longDescription: `Xcel360 is ascend360's flagship education initiative, delivered via Twitter/X Spaces to reach students anywhere in Nigeria with just a smartphone.
 
 Each session is 2-3 hours long and covers:
 - Global scholarship opportunities and how to apply
@@ -107,7 +107,7 @@ The program also features an Annual Presentation Day where students showcase pro
         name: "Johnson Alabi",
         title: "President & Co-Founder",
         roleType: "TRUSTEE",
-        bio: "Johnson is the visionary force behind ASCEND360. A passionate advocate for educational equity, he founded the organization after witnessing first-hand how access to information transforms lives. Under his leadership, Xcel360 has reached over 500 students across Nigeria.",
+        bio: "Johnson is the visionary force behind ascend360. A passionate advocate for educational equity, he founded the organization after witnessing first-hand how access to information transforms lives. Under his leadership, Xcel360 has reached over 500 students across Nigeria.",
         displayOrder: 1,
         isActive: true,
       },
@@ -120,7 +120,7 @@ The program also features an Annual Presentation Day where students showcase pro
         name: "Seun",
         title: "Co-Founder & Director of Programs",
         roleType: "TRUSTEE",
-        bio: "Seun leads program design and implementation at ASCEND360. With deep expertise in community development, Seun ensures every initiative is grounded in the real needs of students and communities across Nigeria.",
+        bio: "Seun leads program design and implementation at ascend360. With deep expertise in community development, Seun ensures every initiative is grounded in the real needs of students and communities across Nigeria.",
         displayOrder: 2,
         isActive: true,
       },
@@ -133,7 +133,7 @@ The program also features an Annual Presentation Day where students showcase pro
         name: "Akindoyin",
         title: "Co-Founder & Director of Partnerships",
         roleType: "TRUSTEE",
-        bio: "Akindoyin builds and manages ASCEND360's strategic partnerships with corporations, international organizations, and academic institutions. Their network has been pivotal in creating scholarship pathways for Xcel360 students.",
+        bio: "Akindoyin builds and manages ascend360's strategic partnerships with corporations, international organizations, and academic institutions. Their network has been pivotal in creating scholarship pathways for Xcel360 students.",
         displayOrder: 3,
         isActive: true,
       },
@@ -164,7 +164,7 @@ The program also features an Annual Presentation Day where students showcase pro
     create: {
       title: "Xcel360 Reaches 500 Students: A Milestone in Educational Access",
       slug: "xcel360-launch-500-students",
-      content: `We are thrilled to announce that ASCEND360's flagship program, Xcel360, has now reached over 500 students across Nigeria through our virtual learning sessions on Twitter/X Spaces.
+      content: `We are thrilled to announce that ascend360's flagship program, Xcel360, has now reached over 500 students across Nigeria through our virtual learning sessions on Twitter/X Spaces.
 
 ## What This Milestone Means
 
@@ -183,7 +183,7 @@ We're expanding Xcel360 sessions to cover more topics and reach more students. O
 
 Thank you to every student, mentor, and partner who has made this journey possible.`,
       excerpt:
-        "ASCEND360's Xcel360 program has reached over 500 Nigerian students through virtual learning sessions — here's what that milestone means and what comes next.",
+        "ascend360's Xcel360 program has reached over 500 Nigerian students through virtual learning sessions — here's what that milestone means and what comes next.",
       status: "PUBLISHED",
       publishedAt: new Date("2024-01-15"),
       authorId: adminUser.id,
@@ -219,7 +219,7 @@ If you are a student reading this: attend the next session. Your future may depe
     prisma.siteConfig.upsert({
       where: { key: "site_name" },
       update: {},
-      create: { key: "site_name", value: "ASCEND360" },
+      create: { key: "site_name", value: "ascend360" },
     }),
     prisma.siteConfig.upsert({
       where: { key: "contact_email" },

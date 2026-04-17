@@ -1,33 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { prisma } from "@/lib/prisma";
 import HomeContent from "./HomeContent";
 
 export const dynamic = "force-dynamic";
 
-async function getHomepageData() {
-  const latestPosts = await prisma.blogPost.findMany({
-    where: { status: "PUBLISHED" },
-    select: {
-      id: true,
-      title: true,
-      slug: true,
-      excerpt: true,
-      featuredImage: true,
-      publishedAt: true,
-      content: true,
-      author: { select: { name: true } },
-      category: { select: { name: true, slug: true } },
-    },
-    orderBy: { publishedAt: "desc" },
-    take: 3,
-  });
-  return { latestPosts };
-}
-
-export default async function HomePage() {
-  const { latestPosts } = await getHomepageData();
-
+export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
@@ -63,7 +40,7 @@ export default async function HomePage() {
           style={{ animationDirection: "reverse", animationDuration: "20s" }}
         />
 
-        {/* Content — staggered rise animations */}
+        {/* Content */}
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <div
             className="inline-flex items-center gap-2 bg-[#4CAF50]/15 border border-[#4CAF50]/35 text-[#4CAF50] text-xs font-bold px-4 py-1.5 rounded-full mb-8 uppercase tracking-widest"
@@ -101,7 +78,7 @@ export default async function HomePage() {
             className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed"
             style={{ animation: "rise 0.65s ease-out 0.46s both" }}
           >
-            ASCEND360 is a Nigerian NGO committed to education access, poverty
+            ascend360 is a Nigerian NGO committed to education access, poverty
             reduction, and environmental action — turning potential into
             achievement for students across Nigeria.
           </p>
@@ -154,7 +131,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── All animated scroll sections ── */}
-      <HomeContent latestPosts={latestPosts} />
+      <HomeContent />
     </>
   );
 }

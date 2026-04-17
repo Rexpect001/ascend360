@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "ASCEND360 Admin Portal",
-    template: "%s | ASCEND360 Admin",
+    default: "ascend360 Admin Portal",
+    template: "%s | ascend360 Admin",
   },
   robots: { index: false, follow: false },
 };

@@ -67,7 +67,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="block mb-4">
               <span className="text-white font-bold text-2xl">
-                ASCEND<span className="text-[#4CAF50]">360</span>
+                ascend<span className="text-[#4CAF50]">360</span>
               </span>
             </Link>
             <p className="text-blue-200 text-sm leading-relaxed mb-6">
@@ -126,7 +126,7 @@ export default function Footer() {
 
         <div className="border-t border-blue-600 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-blue-300 text-sm">
-            &copy; {new Date().getFullYear()} ASCEND360. All rights reserved.
+            &copy; {new Date().getFullYear()} ascend360. All rights reserved.
             Registered NGO in Nigeria.
           </p>
           <p className="text-blue-300 text-sm">

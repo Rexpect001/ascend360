@@ -5,7 +5,7 @@ import ContactForm from "@/components/forms/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with ASCEND360 — for students, volunteers, partners, and media inquiries.",
+    "Get in touch with ascend360 — for students, volunteers, partners, and media inquiries.",
 };
 
 export default function ContactPage() {

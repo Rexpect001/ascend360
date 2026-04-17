@@ -177,7 +177,7 @@ export default function ImpactContent({ stories }: { stories: Story[] }) {
             <Quote size={20} className="text-[#1F4788] opacity-60" />
           </div>
           <blockquote className="text-xl md:text-2xl font-semibold text-[#1F4788] italic leading-relaxed mb-6">
-            &ldquo;ASCEND360&apos;s Xcel360 programme is filling a critical gap in the Nigerian education ecosystem. The transformation we see in students&apos; confidence and ambition is remarkable.&rdquo;
+            &ldquo;ascend360&apos;s Xcel360 programme is filling a critical gap in the Nigerian education ecosystem. The transformation we see in students&apos; confidence and ambition is remarkable.&rdquo;
           </blockquote>
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px w-16 bg-[#4CAF50]/40" />

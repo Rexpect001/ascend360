@@ -7,10 +7,10 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Our Impact",
   description:
-    "See the measurable impact of ASCEND360's programs — 500+ students reached, scholarships won, and communities transformed across Nigeria.",
-  keywords: ["NGO impact Nigeria", "scholarship outcomes", "student success stories", "ASCEND360 impact"],
+    "See the measurable impact of ascend360's programs — 500+ students reached, scholarships won, and communities transformed across Nigeria.",
+  keywords: ["NGO impact Nigeria", "scholarship outcomes", "student success stories", "ascend360 impact"],
   openGraph: {
-    title: "Our Impact | ASCEND360",
+    title: "Our Impact | ascend360",
     description: "500+ students reached, scholarships won, and communities transformed across Nigeria.",
     url: "/impact",
     images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],

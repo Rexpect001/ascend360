@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "ASCEND360 | Education Access, Poverty Reduction & Climate Action";
+export const alt = "ascend360 | Education Access, Poverty Reduction & Climate Action";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -79,7 +79,7 @@ export default function OGImage() {
             marginBottom: 20,
           }}
         >
-          ASCEND<span style={{ color: "#4CAF50" }}>360</span>
+          ascend<span style={{ color: "#4CAF50" }}>360</span>
         </div>
 
         {/* Tagline */}

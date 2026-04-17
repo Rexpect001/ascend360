@@ -56,7 +56,7 @@ function LoginForm() {
         {/* Logo */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-extrabold text-[#1F4788]">
-            ASCEND<span className="text-[#4CAF50]">360</span>
+            ascend<span className="text-[#4CAF50]">360</span>
           </h1>
           <p className="text-[#666] mt-1 text-sm">Admin Portal</p>
         </div>

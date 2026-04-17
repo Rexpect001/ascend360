@@ -147,9 +147,9 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
               <div>
                 <p className="font-bold text-[#333]">{post.author.name}</p>
-                <p className="text-sm text-[#666]">ASCEND360 Team</p>
+                <p className="text-sm text-[#666]">ascend360 Team</p>
                 <p className="text-sm text-[#666] mt-1 leading-relaxed">
-                  Part of the ASCEND360 team working to expand education access
+                  Part of the ascend360 team working to expand education access
                   across Nigeria.
                 </p>
               </div>
@@ -237,7 +237,7 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="bg-[#1F4788] rounded p-5 text-white text-center">
               <h3 className="font-bold mb-2 text-sm">Get Involved</h3>
               <p className="text-blue-200 text-xs mb-4 leading-relaxed">
-                Ready to join ASCEND360's mission?
+                Ready to join ascend360's mission?
               </p>
               <Link
                 href="/get-involved"
